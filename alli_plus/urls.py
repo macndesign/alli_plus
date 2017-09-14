@@ -21,7 +21,7 @@ from core.views import home, about, contact
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
-    url(r'^', home, name='home'),
     url(r'^about/$', about, name='about'),
     url(r'^contact/$', contact, name='contact'),
+    url(r'^$', home, name='home'),
 ] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
